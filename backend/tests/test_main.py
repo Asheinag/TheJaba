@@ -7,4 +7,4 @@ async def test_health(client: AsyncClient):
     response = await client.get("/health")
     data = response.json()
     assert response.status_code == 200
-    assert data["status"] == "ok"
+    assert data["status_app"] == "The Jaba is ok"
